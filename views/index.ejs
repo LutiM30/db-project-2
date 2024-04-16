@@ -1,103 +1,109 @@
+<!-- // Mitul 8927992
+// Karishma 8911439 -->
 <!DOCTYPE html>
 <html lang="en">
-    <!-- Head -->
-    <%- include('./layouts/head'); %>
+  <!-- Head -->
+  <%- include('./layouts/head'); %>
 
-    <body>
-        <!-- Responsive navbar-->
-        <%- include('./layouts/navbar'); %>
+  <body>
+    <!-- Responsive navbar-->
+    <%- include('./layouts/navbar'); %>
 
-        <!-- Header-->
-        <%- include('./layouts/header'); %>
+    <!-- Header-->
+    <%- include('./layouts/header'); %>
 
-        <!--Main Content-->
-        <main class="container pt-5 pb-5">
+    <!--Main Content-->
+    <main class="container pt-5 pb-5">
+      <% if(songs?.length > 0) { %>
 
-            <% if(songs?.length > 0) { %>
-    
-                <div class="row mt-3">
-                    <div class="col">
-                        <h3>List of Songs</h3>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Title</th>
-                                    <th>Artist</th>
-                                    <th>Genre</th>
-                                    <th>Release Year</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody id="songList">
-                                <!-- Songs will be dynamically added here -->
-                                <% for ( let song of songs ) { %>
-                                    <tr>
-                                        <td><%= song.title %></td>
-                                        <td><%= song.artist.name %></td>
-                                        <td><%= song.genre.name %></td>
-                                        <td><%= song.releaseYear %></td>
-                                        <td><%= song.price %> CAD</td>
-                                        <td>
-                                            <button onclick="buySong('<%= song._id %>')" class="btn btn-primary">Buy</button>
-                                        </td>
-                                        <!-- <td>
+      <div class="row mt-3">
+        <div class="col">
+          <h3>List of Songs</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Artist</th>
+                <th>Genre</th>
+                <th>Release Year</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody id="songList">
+              <!-- Songs will be dynamically added here -->
+              <% for ( let song of songs ) { %>
+              <tr>
+                <td><%= song.title %></td>
+                <td><%= song.artist.name %></td>
+                <td><%= song.genre.name %></td>
+                <td><%= song.releaseYear %></td>
+                <td><%= song.price %> CAD</td>
+                <td>
+                  <button
+                    onclick="buySong('<%= song._id %>')"
+                    class="btn btn-primary"
+                  >
+                    Buy
+                  </button>
+                </td>
+                <!-- <td>
                                             <audio controls>
                                                 <source src="<%= song.songURL %>" type="audio/mpeg">
                                                 Your browser does not support the audio element.
                                             </audio>
                                         </td> -->
-                                    </tr>                                      
-                                <% } %>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-            <% } else { %>
+      <% } else { %>
 
-                <div class="row mt-3">
-                    <div class="col">
-                        <h3>No Songs Found</h3>
-                    </div>
-                </div>
+      <div class="row mt-3">
+        <div class="col">
+          <h3>No Songs Found</h3>
+        </div>
+      </div>
 
-            <% } %>
-        </main>
+      <% } %>
+    </main>
 
-        <!-- Footer-->
-        <%- include('./layouts/footer'); %>
+    <!-- Footer-->
+    <%- include('./layouts/footer'); %>
 
-        <!-- JS-->
-        <%- include('./layouts/script'); %>
+    <!-- JS-->
+    <%- include('./layouts/script'); %>
 
-        <script>
-            // Function to buy the song
-            function buySong(songId) {
-                
-                fetch(`/buysong/${songId}`, {
-                    method: 'GET',
-                })
-                .then(response => {
-                    if (response.ok) {
-                        response.blob().then(blob => {
-                            const url = window.URL.createObjectURL(blob);
-                            const a = document.createElement('a');
-                            a.href = url;
-                            a.download = `invoice_${songId}.pdf`;
-                            document.body.appendChild(a);
-                            a.click();
-                            window.URL.revokeObjectURL(url);
-                        });
-                    } else {
-                        alert('Failed to purchase the song. Please try again.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error buying song:', error.message);
-                    alert('An error occurred while purchasing the song. Please try again later.');
-                });
+    <script>
+      // Function to buy the song
+      function buySong(songId) {
+        fetch(`/buysong/${songId}`, {
+          method: "GET",
+        })
+          .then((response) => {
+            if (response.ok) {
+              response.blob().then((blob) => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = `invoice_${songId}.pdf`;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+              });
+            } else {
+              alert("Failed to purchase the song. Please try again.");
             }
-        </script>
-
-    </body>
+          })
+          .catch((error) => {
+            console.error("Error buying song:", error.message);
+            alert(
+              "An error occurred while purchasing the song. Please try again later."
+            );
+          });
+      }
+    </script>
+  </body>
 </html>

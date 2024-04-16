@@ -1,170 +1,255 @@
+<!-- // Mitul 8927992
+// Karishma 8911439 -->
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Responsive navbar-->
+  <%- include('./layouts/navbar'); %>
 
-    <!-- Responsive navbar-->
-    <%- include('./layouts/navbar'); %>
+  <!-- Head -->
+  <%- include('./layouts/head'); %>
 
-    <!-- Head -->
-    <%- include('./layouts/head'); %>
-
-    <body>
-        <!--Main Content-->
-        <main>
-            <div class="container mt-3 mb-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <ul class="nav nav-tabs mb-3" id="authTab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup" type="button" role="tab" aria-controls="signup" aria-selected="false">Sign Up</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content" id="authTabContent">
-                                    <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                                        <h5 class="card-title">Login</h5>
-                                        <form id="loginForm">
-                                            <div class="mb-3">
-                                                <label for="loginUsername" class="form-label">Username</label>
-                                                <input type="text" class="form-control" name="loginUsername" id="loginUsername" placeholder="Enter your username">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="loginPassword" class="form-label">Password</label>
-                                                <input type="password" class="form-control" name="loginPassword" id="loginPassword" placeholder="Enter your password">
-                                            </div>
-                                            <div id="loginError" class="mb-5 text-danger"></div>
-                                            <button type="submit" class="btn btn-primary">Login</button>
-                                        </form>
-                                    </div>
-                                    <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
-                                        <h5 class="card-title">Sign Up</h5>
-                                        <form id="signupForm">
-                                            <div class="mb-3">
-                                                <label for="signupUsername" class="form-label">Username</label>
-                                                <input type="text" class="form-control" name="signupUsername" id="signupUsername" placeholder="Enter your username">
-                                            </div>      
-                                            <div class="mb-3">
-                                                <label for="userType" class="form-label">User Type</label>
-                                                <select class="form-select" id="userType">
-                                                    <option selected disabled>Select user type</option>
-                                                    <option value="user">User</option>
-                                                    <option value="admin">Admin</option>
-                                                </select>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="signupPassword" class="form-label">Password</label>
-                                                <input type="password" class="form-control" name="signupPassword" id="signupPassword" placeholder="Enter your password">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
-                                                <input type="password" class="form-control" name="signupConfirmPassword" id="signupConfirmPassword" placeholder="Confirm your password">
-                                            </div>
-                                            <div id="signupError" class="mb-5 text-danger"></div>
-                                            <button type="submit" class="btn btn-primary">Sign Up</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+  <body>
+    <!--Main Content-->
+    <main>
+      <div class="container mt-3 mb-5">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <ul class="nav nav-tabs mb-3" id="authTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="login-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#login"
+                      type="button"
+                      role="tab"
+                      aria-controls="login"
+                      aria-selected="true"
+                    >
+                      Login
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="signup-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#signup"
+                      type="button"
+                      role="tab"
+                      aria-controls="signup"
+                      aria-selected="false"
+                    >
+                      Sign Up
+                    </button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="authTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="login"
+                    role="tabpanel"
+                    aria-labelledby="login-tab"
+                  >
+                    <h5 class="card-title">Login</h5>
+                    <form id="loginForm">
+                      <div class="mb-3">
+                        <label for="loginUsername" class="form-label"
+                          >Username</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="loginUsername"
+                          id="loginUsername"
+                          placeholder="Enter your username"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="loginPassword" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          name="loginPassword"
+                          id="loginPassword"
+                          placeholder="Enter your password"
+                        />
+                      </div>
+                      <div id="loginError" class="mb-5 text-danger"></div>
+                      <button type="submit" class="btn btn-primary">
+                        Login
+                      </button>
+                    </form>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="signup"
+                    role="tabpanel"
+                    aria-labelledby="signup-tab"
+                  >
+                    <h5 class="card-title">Sign Up</h5>
+                    <form id="signupForm">
+                      <div class="mb-3">
+                        <label for="signupUsername" class="form-label"
+                          >Username</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="signupUsername"
+                          id="signupUsername"
+                          placeholder="Enter your username"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="userType" class="form-label"
+                          >User Type</label
+                        >
+                        <select class="form-select" id="userType">
+                          <option selected disabled>Select user type</option>
+                          <option value="user">User</option>
+                          <option value="admin">Admin</option>
+                        </select>
+                      </div>
+                      <div class="mb-3">
+                        <label for="signupPassword" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          name="signupPassword"
+                          id="signupPassword"
+                          placeholder="Enter your password"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="signupConfirmPassword" class="form-label"
+                          >Confirm Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          name="signupConfirmPassword"
+                          id="signupConfirmPassword"
+                          placeholder="Confirm your password"
+                        />
+                      </div>
+                      <div id="signupError" class="mb-5 text-danger"></div>
+                      <button type="submit" class="btn btn-primary">
+                        Sign Up
+                      </button>
+                    </form>
+                  </div>
                 </div>
+              </div>
             </div>
-        </main>
+          </div>
+        </div>
+      </div>
+    </main>
 
-        <!-- Footer-->
-        <%- include('./layouts/footer'); %>
+    <!-- Footer-->
+    <%- include('./layouts/footer'); %>
 
-        <!-- JS-->
-        <%- include('./layouts/script'); %>
+    <!-- JS-->
+    <%- include('./layouts/script'); %>
 
-        <script>
+    <script>
+      // JavaScript to handle signup form submission
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
 
-            // JavaScript to handle signup form submission
-            document.getElementById('signupForm').addEventListener('submit', async function(event) {
-                event.preventDefault();
-                
-                const form = event.target;
-                const formData = {
-                    signupUsername: form.signupUsername.value,
-                    signupPassword: form.signupPassword.value,
-                    signupConfirmPassword: form.signupConfirmPassword.value,
-                    userType: form.userType.value
-                };
+          const form = event.target;
+          const formData = {
+            signupUsername: form.signupUsername.value,
+            signupPassword: form.signupPassword.value,
+            signupConfirmPassword: form.signupConfirmPassword.value,
+            userType: form.userType.value,
+          };
 
-                try {
+          try {
+            if (
+              formData.signupUsername === "" ||
+              formData.signupPassword === "" ||
+              formData.signupConfirmPassword === "" ||
+              formData.userType === ""
+            ) {
+              throw new Error("All fields are required");
+            }
 
-                    if(formData.signupUsername==="" || formData.signupPassword==="" || formData.signupConfirmPassword==="" || formData.userType===""){
-                        throw new Error('All fields are required');
-                    }
+            if (formData.signupPassword !== formData.signupConfirmPassword) {
+              throw new Error("Password does not match");
+            }
 
-                    if (formData.signupPassword !== formData.signupConfirmPassword) {
-                        throw new Error('Password does not match')
-                    }
-
-                    const response = await fetch('/signup', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)
-                    });
-
-                    if (!response.ok) {
-                        const errorData = await response.json();
-                        if (errorData.error) {
-                            throw new Error(errorData.error);
-                        }
-                    } else {
-                        window.location.href = '/';
-                    }
-                } catch (error) {
-                    document.getElementById('signupError').textContent = error.message;
-                }
+            const response = await fetch("/signup", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
             });
 
-            // JavaScript to handle login form submission
-            document.getElementById('loginForm').addEventListener('submit', async function(event) {
-                event.preventDefault();
-                
-                const form = event.target;
-                const formData = {
-                    loginUsername: form.loginUsername.value,
-                    loginPassword: form.loginPassword.value,
-                };
+            if (!response.ok) {
+              const errorData = await response.json();
+              if (errorData.error) {
+                throw new Error(errorData.error);
+              }
+            } else {
+              window.location.href = "/";
+            }
+          } catch (error) {
+            document.getElementById("signupError").textContent = error.message;
+          }
+        });
 
-                try {
+      // JavaScript to handle login form submission
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
 
-                    if(formData.loginUsername==="" || formData.loginPassword===""){
-                        throw new Error('All fields are required');
-                    }
+          const form = event.target;
+          const formData = {
+            loginUsername: form.loginUsername.value,
+            loginPassword: form.loginPassword.value,
+          };
 
-                    const response = await fetch('/login', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(formData)
-                    });
+          try {
+            if (
+              formData.loginUsername === "" ||
+              formData.loginPassword === ""
+            ) {
+              throw new Error("All fields are required");
+            }
 
-                    if (!response.ok) {
-                        const errorData = await response.json();
-                        if (errorData.error) {
-                            throw new Error(errorData.error);
-                        }
-                    } else {
-                        const data = await response.json();
-                        window.location.href = '/';
-                    }
-                } catch (error) {
-                    document.getElementById('loginError').textContent = error.message;
-                }
+            const response = await fetch("/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
             });
 
-        </script>
-
-    </body>
+            if (!response.ok) {
+              const errorData = await response.json();
+              if (errorData.error) {
+                throw new Error(errorData.error);
+              }
+            } else {
+              const data = await response.json();
+              window.location.href = "/";
+            }
+          } catch (error) {
+            document.getElementById("loginError").textContent = error.message;
+          }
+        });
+    </script>
+  </body>
 </html>
-
