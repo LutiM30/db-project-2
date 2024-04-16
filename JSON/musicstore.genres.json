@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "661e082c158bbb10aa9eb4ab"
+  },
+  "name": "Country/Bluegrass",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0b76bf0674c1fcdc5e8a"
+  },
+  "name": "Hip-Hop",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0bd7bf0674c1fcdc5e96"
+  },
+  "name": "Rock/Pop",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0c5abf0674c1fcdc5ea8"
+  },
+  "name": "Rock/Pop",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0cdcbf0674c1fcdc5eb4"
+  },
+  "name": "Blues",
+  "__v": 0
+}]

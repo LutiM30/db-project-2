@@ -1,0 +1,95 @@
+[{
+  "_id": {
+    "$oid": "661e082c158bbb10aa9eb4ad"
+  },
+  "title": "Abilene",
+  "artist": {
+    "$oid": "661e082b158bbb10aa9eb4a9"
+  },
+  "genre": {
+    "$oid": "661e082c158bbb10aa9eb4ab"
+  },
+  "releaseYear": 1987,
+  "price": 10,
+  "songURL": "https://app.boombox.io/app/shares/c8lzenjga19D3GEoY",
+  "uploadedAt": {
+    "$date": "2024-04-16T05:10:04.181Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0b76bf0674c1fcdc5e8c"
+  },
+  "title": "Action Satisfaction",
+  "artist": {
+    "$oid": "661e0b76bf0674c1fcdc5e88"
+  },
+  "genre": {
+    "$oid": "661e0b76bf0674c1fcdc5e8a"
+  },
+  "releaseYear": 1998,
+  "price": 15,
+  "songURL": "https://app.boombox.io/app/shares/c8lzenjga19D3GEoY",
+  "uploadedAt": {
+    "$date": "2024-04-16T05:24:06.254Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0bd7bf0674c1fcdc5e98"
+  },
+  "title": "After Midnight",
+  "artist": {
+    "$oid": "661e0bd7bf0674c1fcdc5e94"
+  },
+  "genre": {
+    "$oid": "661e0bd7bf0674c1fcdc5e96"
+  },
+  "releaseYear": 1965,
+  "price": 10,
+  "songURL": "https://app.boombox.io/app/shares/c8lzenjga19D3GEoY",
+  "uploadedAt": {
+    "$date": "2024-04-16T05:25:43.199Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0c5abf0674c1fcdc5eaa"
+  },
+  "title": "Back In Black",
+  "artist": {
+    "$oid": "661e0c59bf0674c1fcdc5ea6"
+  },
+  "genre": {
+    "$oid": "661e0c5abf0674c1fcdc5ea8"
+  },
+  "releaseYear": 1980,
+  "price": 20,
+  "songURL": "https://app.boombox.io/app/shares/c8lzenjga19D3GEoY",
+  "uploadedAt": {
+    "$date": "2024-04-16T05:27:54.032Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0cdcbf0674c1fcdc5eb6"
+  },
+  "title": "Candy Man Blues",
+  "artist": {
+    "$oid": "661e0cdbbf0674c1fcdc5eb2"
+  },
+  "genre": {
+    "$oid": "661e0cdcbf0674c1fcdc5eb4"
+  },
+  "releaseYear": 1928,
+  "price": 15,
+  "songURL": "https://app.boombox.io/app/shares/c8lzenjga19D3GEoY",
+  "uploadedAt": {
+    "$date": "2024-04-16T05:30:04.322Z"
+  },
+  "__v": 0
+}]

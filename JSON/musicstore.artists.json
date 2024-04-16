@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "661e082b158bbb10aa9eb4a9"
+  },
+  "name": "Loudermilk",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0b76bf0674c1fcdc5e88"
+  },
+  "name": "Macfadden",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0bd7bf0674c1fcdc5e94"
+  },
+  "name": "Eric Clapton",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0c59bf0674c1fcdc5ea6"
+  },
+  "name": "Johnson",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "661e0cdbbf0674c1fcdc5eb2"
+  },
+  "name": "Mississippi Joh",
+  "__v": 0
+}]
