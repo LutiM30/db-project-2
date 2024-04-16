@@ -11,6 +11,9 @@ const Order = require("../models/orderModel");
 const PDFDocument = require("pdfkit");
 const fs = require("fs");
 
+// THIS FILE CONTAINS Controllers for everyfunctions which being used for the project
+
+// DASHBOARD
 exports.dashboard = async (req, res) => {
   let songs = await Song.find({})
     .sort({ uploadedAt: -1 })
@@ -32,6 +35,7 @@ exports.dashboard = async (req, res) => {
   );
 };
 
+// SIGNUP
 exports.signup = async (req, res) => {
   try {
     const { signupUsername, signupPassword, userType } = req.body;
@@ -56,6 +60,7 @@ exports.signup = async (req, res) => {
   }
 };
 
+// LOGIN
 exports.login = async (req, res) => {
   try {
     const { loginUsername, loginPassword } = req.body;
@@ -79,6 +84,7 @@ exports.login = async (req, res) => {
   }
 };
 
+// LOGOUT
 exports.logout = (req, res) => {
   try {
     req.session.destroy(function (err) {
@@ -93,6 +99,7 @@ exports.logout = (req, res) => {
   }
 };
 
+// CRUD Operation
 exports.addSong = async (req, res) => {
   try {
     const {

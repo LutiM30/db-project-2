@@ -3,6 +3,7 @@
 const jwt = require("jsonwebtoken");
 const Auth = require("../models/authModel");
 
+// SACRED ROUTINGS
 const authMiddleware = async (req, res, next) => {
   try {
     var decoded = jwt.verify(req.session.token, "musicstore");
