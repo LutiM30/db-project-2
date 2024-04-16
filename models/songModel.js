@@ -2,6 +2,7 @@
 // Karishma 8911439
 const mongoose = require("mongoose");
 
+// Song information
 const songSchema = new mongoose.Schema({
   title: {
     type: String,

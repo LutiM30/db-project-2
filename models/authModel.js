@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 const uniqueValidator = require("mongoose-unique-validator");
 
+// Auth Table
 const AuthSchema = new Schema({
   username: {
     type: String,
@@ -20,6 +21,7 @@ const AuthSchema = new Schema({
   },
 });
 
+// all user wil be unique
 AuthSchema.plugin(uniqueValidator);
 
 const Auth = mongoose.model("auth", AuthSchema);

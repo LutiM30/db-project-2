@@ -3,7 +3,7 @@
 const jwt = require("jsonwebtoken");
 const Auth = require("../models/authModel");
 
-// SACRED ROUTINGS
+// routings will only be available if user is authenticated
 const authMiddleware = async (req, res, next) => {
   try {
     var decoded = jwt.verify(req.session.token, "musicstore");
